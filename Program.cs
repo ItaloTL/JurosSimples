@@ -1,15 +1,17 @@
-﻿//Tarefa JurosSimple
+﻿//Tarefa JurosSimples
 Console.Clear();
 
-double c, j, i, t, m;
-Console.Write("Capital: ");
-c = Convert.ToDouble(Console.ReadLine()!);
-Console.Write("Juros: ");
+decimal c, j, m;
+double i;
+int t;
+Console.Write("Insira seu Capital:(R$)");
+c = Convert.ToDecimal(Console.ReadLine()!);
+Console.Write("Insira os Juros: ");
 i = Convert.ToDouble(Console.ReadLine()!);
-Console.Write("Meses: ");
-t = Convert.ToDouble(Console.ReadLine()!);
+Console.Write("Adicione os Meses: ");
+t = Convert.ToInt32(Console.ReadLine()!);
 
-j = c * i * t / 100;
+j = c * Convert.ToDecimal(i / 100) * t;
 m = c + j;
 Console.Write("Seus juros são de: ");
     Console.WriteLine($"{j}");
